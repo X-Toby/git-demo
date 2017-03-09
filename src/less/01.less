@@ -1,0 +1,47 @@
+//简单变量
+@bcolor: pink;
+#itany {
+    width: 400px;
+    height: 400px;
+    border: 2px solid @bcolor;
+}
+
+#hello {
+    width: 200px;
+    height: 200px;
+    border: 1px dashed @bcolor;
+}
+//选择器变量
+@d11:d1;
+
+#@{d11}{
+	width: 200px;
+	height: 200px;
+
+}
+//URL变量
+@imgpath:"../img";
+#d2{
+	width: 200px;
+	height: 200px;
+	background-image: url("@{imgpath}/baidu.jpg");
+}
+//属性值的变量
+@color:color;
+#d3{
+	width: 200px;
+	height: 200px;
+	background-@{color}:red; 
+}
+//变量的嵌套
+@size:50px;
+@fontsize:size;
+#d3{
+	font-size: @@fontsize;
+}
+//延迟加载
+@d2font:20px;
+#d2{
+	font-size: @d2font;
+	@d2font:100px;
+}

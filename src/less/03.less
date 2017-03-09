@@ -1,0 +1,33 @@
+div{
+	width: 200px;
+	height: 200px;
+	border: 5px dashed black;
+}
+//unit函数
+.fontsize(@size){
+	font-size: unit(@size,px);
+}
+#d1{
+	.fontsize(40);
+}
+
+//convert函数
+#d2{
+	transform:rotate(convert(50deg,rad))
+}
+//color函数
+#d3{
+	background-color:darken(pink,10%);
+
+}
+#d1{
+	background-color: lighten(red,10%);
+}
+#d2{
+	background-color: mix(red,blue,20%);
+}
+//date-ui函数
+#d4{
+	background-image: url(../images/baidu.jpg);
+	
+}

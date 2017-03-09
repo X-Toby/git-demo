@@ -1,0 +1,26 @@
+div{
+	width: 200px;
+	height: 200px;
+	border: 1px solid red;
+}
+#d1{
+	color: #ccc;
+	> #d2{
+		font-size: 30px;
+	}
+	#d3{
+		background-color: yellow;
+	}
+}
+
+#inline{
+	color: red;
+}
+
+#inline2{
+	&:extend(#inline);
+	font-size: 10px;
+}
+#inline3:extend(#inline){
+	font-size: 20px;
+}
